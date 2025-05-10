@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Classifier</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Fake News Classifier</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <textarea name="article" rows="10" cols="80" placeholder="Paste your news article here..."></textarea><br>
+        <input type="submit" value="Classify">
+    </form>
+    {% if result %}
+    <div id="result">
+        <h3>Classification Result</h3>
+        <p><strong>Classification:</strong> {{ result.classification }}</p>
+        <p><strong>Confidence:</strong> {{ result.confidence }}</p>
+        <p><strong>Reasoning:</strong> {{ result.reasoning }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
