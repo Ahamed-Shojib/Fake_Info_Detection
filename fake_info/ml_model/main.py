@@ -62,8 +62,7 @@ from chromadb.utils import embedding_functions
 
 # --- Manually set your API Key ---
 # Either paste directly or use os.environ (secure via Colab secrets UI)
-GOOGLE_API_KEY =   # Replace this
-#AIzaSyBZVVD4P2oU26lx2TPleNfEpi8bIEQqq2s
+GOOGLE_API_KEY =   # API Key
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Initialize ChromaDB client with Colab path
