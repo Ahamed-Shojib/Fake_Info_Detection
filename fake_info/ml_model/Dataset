@@ -1,0 +1,12 @@
+#!/bin/bash
+kaggle datasets download ahamedshojib/fake-news-info
+
+
+
+#Kaggle
+import kagglehub
+
+# Download latest version
+path = kagglehub.dataset_download("ahamedshojib/fake-news-info")
+
+print("Path to dataset files:", path)
